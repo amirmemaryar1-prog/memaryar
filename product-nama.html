@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>پک نما — پرامپت‌نویسی رندر معماری با هوش مصنوعی | معماریار</title>
+<meta name="description" content="پک نما: راهنمای کامل تبدیل حجم خام معماری به نمای واقع‌گرایانه با هوش مصنوعی. ۹ فصل، بیش از ۱۵ پرامپت آماده و تست‌شده.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Vazirmatn:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --bg:#0B0D12; --panel:#12151C; --panel-2:#181C25; --line:#232838;
+    --text:#EDEFF4; --muted:#8890A0; --gold:#C9A227; --gold-soft:#E8CD7A; --good:#3FC989;
+  }
+  *{box-sizing:border-box; margin:0; padding:0;}
+  body{background:var(--bg); color:var(--text); font-family:'Vazirmatn', Tahoma, sans-serif; line-height:1.85; -webkit-font-smoothing:antialiased;}
+  .mono{font-family:'JetBrains Mono', monospace; direction:ltr; unicode-bidi:isolate;}
+  a{color:inherit; text-decoration:none;}
+  .container{max-width:820px; margin:0 auto; padding:0 20px;}
+
+  header{border-bottom:1px solid var(--line); padding:18px 0;}
+  .nav{max-width:820px; margin:0 auto; padding:0 20px; display:flex; align-items:center; justify-content:space-between;}
+  .logo{display:flex; align-items:center; gap:10px; font-weight:800; font-size:17px;}
+  .logo-mark{width:30px; height:30px; border:1px solid var(--gold); border-radius:4px; display:flex; align-items:center; justify-content:center; color:var(--gold); font-size:13px; font-weight:700;}
+  .back{font-size:13.5px; color:var(--muted);}
+  .back:hover{color:var(--gold);}
+
+  .cover{padding:56px 0 30px; border-bottom:1px solid var(--line);}
+  .kicker{font-family:'JetBrains Mono', monospace; font-size:12px; color:var(--gold); letter-spacing:.5px; margin-bottom:18px;}
+  h1{font-size:clamp(30px,5vw,44px); font-weight:800; letter-spacing:-.5px;}
+  .sub{color:var(--muted); font-size:16px; margin-top:16px; max-width:560px;}
+
+  .price-bar{display:flex; align-items:center; justify-content:space-between; gap:16px; flex-wrap:wrap; margin-top:28px; background:var(--panel); border:1px solid var(--gold); border-radius:10px; padding:18px 22px;}
+  .price{font-size:22px; font-weight:800;}
+  .price small{display:block; font-size:12px; color:var(--muted); font-weight:400; margin-top:4px;}
+  .btn-buy{background:var(--gold); color:#1A1204; padding:13px 26px; border-radius:8px; font-weight:700; font-size:15px;}
+  .btn-buy[aria-disabled="true"]{opacity:.85; cursor:not-allowed;}
+  .buy-note{font-size:12px; color:var(--muted); margin-top:10px;}
+
+  section.sh{padding:44px 0; border-bottom:1px solid var(--line);}
+  section.sh:last-of-type{border-bottom:none;}
+  h2{font-size:20px; font-weight:800; margin-bottom:14px;}
+  p{font-size:15px; color:var(--text); max-width:640px;}
+  p.muted{color:var(--muted);}
+
+  .grid2{display:grid; grid-template-columns:1fr 1fr; gap:10px; margin-top:6px;}
+  @media (max-width:560px){.grid2{grid-template-columns:1fr;}}
+  .item{display:flex; gap:10px; align-items:flex-start; background:var(--panel); border:1px solid var(--line); border-radius:8px; padding:14px 16px; font-size:13.5px;}
+  .item .m{color:var(--good); font-family:'JetBrains Mono', monospace;}
+
+  .chapters-list{background:var(--panel); border:1px solid var(--line); border-radius:10px; overflow:hidden;}
+  .ch{display:flex; gap:16px; align-items:center; padding:14px 18px; border-bottom:1px solid var(--line); font-size:14px;}
+  .ch:last-child{border-bottom:none;}
+  .ch .n{font-family:'JetBrains Mono', monospace; color:var(--gold); font-size:12.5px; min-width:44px;}
+
+  .for-who{display:flex; flex-wrap:wrap; gap:10px; margin-top:6px;}
+  .tag-pill{background:var(--panel-2); border:1px solid var(--line); border-radius:100px; padding:8px 16px; font-size:13px;}
+
+  footer{padding:40px 0; text-align:center; color:var(--muted); font-size:13px;}
+  footer .brand{font-weight:800; color:var(--gold); margin-bottom:6px;}
+</style>
+</head>
+<body>
+
+<header>
+  <div class="nav">
+    <a class="logo" href="index.html"><div class="logo-mark">م</div>معماریار</a>
+    <a class="back" href="index.html">→ بازگشت به صفحه اصلی</a>
+  </div>
+</header>
+
+<div class="container">
+
+  <section class="cover">
+    <div class="kicker mono">PACK 01 — AI FACADE PROMPTING</div>
+    <h1>نما</h1>
+    <p class="sub">راهنمای کامل تبدیل حجم خام معماری به نمای واقع‌گرایانه با هوش مصنوعی — نه یک آموزش سطحی، یک متد قابل‌تکرار.</p>
+
+    <div class="price-bar">
+      <div class="price">۸۹,۰۰۰ تومان<small>پرداخت یک‌بار، دسترسی دائمی پس از راه‌اندازی درگاه</small></div>
+      <a class="btn-buy" href="#" aria-disabled="true" onclick="return false;">خرید محصول</a>
+    </div>
+    <p class="buy-note">سیستم پرداخت آنلاین معماریار در حال راه‌اندازی است. برای اطلاع از فعال‌شدن خرید، از طریق اینستاگرام پیگیری کنید.</p>
+  </section>
+
+  <section class="sh">
+    <h2>این پک برای چه کسانی است؟</h2>
+    <div class="for-who">
+      <span class="tag-pill">دانشجویان معماری</span>
+      <span class="tag-pill">معماران جوان</span>
+      <span class="tag-pill">علاقه‌مندان به رندر با AI</span>
+      <span class="tag-pill">کسانی که ارائه سریع نیاز دارند</span>
+    </div>
+  </section>
+
+  <section class="sh">
+    <h2>چه چیزی می‌گیرید</h2>
+    <div class="grid2">
+      <div class="item"><span class="m">＋</span> ۹ فصل آموزشی ساختاریافته</div>
+      <div class="item"><span class="m">＋</span> بیش از ۱۵ پرامپت آماده و تست‌شده</div>
+      <div class="item"><span class="m">＋</span> جدول زاویه دوربین و کاربرد هرکدام</div>
+      <div class="item"><span class="m">＋</span> جدول سبک‌های معماری و کلیدواژه</div>
+      <div class="item"><span class="m">＋</span> جدول متریال‌های اصلی نما</div>
+      <div class="item"><span class="m">＋</span> راهنمای رفع خطاهای رایج رندر</div>
+    </div>
+  </section>
+
+  <section class="sh">
+    <h2>فهرست فصل‌ها</h2>
+    <div class="chapters-list">
+      <div class="ch"><span class="n mono">01</span>مقدمه و مفهوم Façade, reimagined</div>
+      <div class="ch"><span class="n mono">02</span>پیش از رندر — آماده‌سازی حجم</div>
+      <div class="ch"><span class="n mono">03</span>زاویه‌های دوربین</div>
+      <div class="ch"><span class="n mono">04</span>سبک‌های معماری</div>
+      <div class="ch"><span class="n mono">05</span>متریال‌های اصلی</div>
+      <div class="ch"><span class="n mono">06</span>فیگور انسانی برای مقیاس</div>
+      <div class="ch"><span class="n mono">07</span>پرامپت‌های آماده</div>
+      <div class="ch"><span class="n mono">08</span>عیب‌یابی نتایج ضعیف</div>
+      <div class="ch"><span class="n mono">09</span>گام‌به‌گام اجرا در ابزار AI</div>
+    </div>
+  </section>
+
+  <section class="sh">
+    <h2>مزایا</h2>
+    <p class="muted">به‌جای امتحان‌کردن تصادفی پرامپت‌ها، یک فرمول ثابت و قابل‌تکرار برای رندر نمای معماری به‌دست می‌آورید که روی هر پروژه‌ای قابل استفاده است.</p>
+  </section>
+
+</div>
+
+<footer>
+  <div class="brand">معماریار</div>
+  یاد بگیر، طراحی کن.
+</footer>
+
+</body>
+</html>

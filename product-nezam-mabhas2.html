@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>نظام مهندسی | مبحث دوم — بسته رمزگشایی و تست | معماریار</title>
+<meta name="description" content="بسته فشرده مبحث دوم مقررات ملی ساختمان ویژه آزمون نظام مهندسی معماری: اعداد طلایی، جدول‌های کلیدی و ۴۰ تست استاندارد و تله‌دار با کلید و تحلیل.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Vazirmatn:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --bg:#0B0D12; --panel:#12151C; --panel-2:#181C25; --line:#232838;
+    --text:#EDEFF4; --muted:#8890A0; --gold:#C9A227; --gold-soft:#E8CD7A; --good:#3FC989;
+  }
+  *{box-sizing:border-box; margin:0; padding:0;}
+  body{background:var(--bg); color:var(--text); font-family:'Vazirmatn', Tahoma, sans-serif; line-height:1.85; -webkit-font-smoothing:antialiased;}
+  .mono{font-family:'JetBrains Mono', monospace; direction:ltr; unicode-bidi:isolate;}
+  a{color:inherit; text-decoration:none;}
+  .container{max-width:820px; margin:0 auto; padding:0 20px;}
+
+  header{border-bottom:1px solid var(--line); padding:18px 0;}
+  .nav{max-width:820px; margin:0 auto; padding:0 20px; display:flex; align-items:center; justify-content:space-between;}
+  .logo{display:flex; align-items:center; gap:10px; font-weight:800; font-size:17px;}
+  .logo-mark{width:30px; height:30px; border:1px solid var(--gold); border-radius:4px; display:flex; align-items:center; justify-content:center; color:var(--gold); font-size:13px; font-weight:700;}
+  .back{font-size:13.5px; color:var(--muted);}
+  .back:hover{color:var(--gold);}
+
+  .cover{padding:56px 0 30px; border-bottom:1px solid var(--line);}
+  .kicker{font-family:'JetBrains Mono', monospace; font-size:12px; color:var(--gold); letter-spacing:.5px; margin-bottom:18px;}
+  h1{font-size:clamp(26px,4.4vw,38px); font-weight:800; letter-spacing:-.5px; line-height:1.4;}
+  .sub{color:var(--muted); font-size:16px; margin-top:16px; max-width:580px;}
+
+  .price-bar{display:flex; align-items:center; justify-content:space-between; gap:16px; flex-wrap:wrap; margin-top:28px; background:var(--panel); border:1px solid var(--gold); border-radius:10px; padding:18px 22px;}
+  .price{font-size:22px; font-weight:800;}
+  .price small{display:block; font-size:12px; color:var(--muted); font-weight:400; margin-top:4px;}
+  .btn-buy{background:var(--gold); color:#1A1204; padding:13px 26px; border-radius:8px; font-weight:700; font-size:15px;}
+  .btn-buy[aria-disabled="true"]{opacity:.85; cursor:not-allowed;}
+  .buy-note{font-size:12px; color:var(--muted); margin-top:10px;}
+
+  section.sh{padding:44px 0; border-bottom:1px solid var(--line);}
+  section.sh:last-of-type{border-bottom:none;}
+  h2{font-size:20px; font-weight:800; margin-bottom:14px;}
+  p{font-size:15px; color:var(--text); max-width:640px;}
+  p.muted{color:var(--muted);}
+
+  .grid2{display:grid; grid-template-columns:1fr 1fr; gap:10px; margin-top:6px;}
+  @media (max-width:560px){.grid2{grid-template-columns:1fr;}}
+  .item{display:flex; gap:10px; align-items:flex-start; background:var(--panel); border:1px solid var(--line); border-radius:8px; padding:14px 16px; font-size:13.5px;}
+  .item .m{color:var(--good); font-family:'JetBrains Mono', monospace;}
+
+  .two-part{display:grid; grid-template-columns:1fr 1fr; gap:14px;}
+  @media (max-width:640px){.two-part{grid-template-columns:1fr;}}
+  .part{background:var(--panel); border:1px solid var(--line); border-radius:10px; padding:20px;}
+  .part .tag{font-family:'JetBrains Mono', monospace; font-size:11px; color:var(--gold); margin-bottom:8px;}
+  .part h3{font-size:15px; font-weight:700; margin-bottom:8px;}
+  .part p{font-size:13.5px; color:var(--muted);}
+
+  .for-who{display:flex; flex-wrap:wrap; gap:10px; margin-top:6px;}
+  .tag-pill{background:var(--panel-2); border:1px solid var(--line); border-radius:100px; padding:8px 16px; font-size:13px;}
+
+  .disclaimer{background:var(--panel-2); border-inline-start:3px solid var(--gold); border-radius:6px; padding:16px 18px; font-size:13px; color:var(--muted); margin-top:18px;}
+
+  footer{padding:40px 0; text-align:center; color:var(--muted); font-size:13px;}
+  footer .brand{font-weight:800; color:var(--gold); margin-bottom:6px;}
+</style>
+</head>
+<body>
+
+<header>
+  <div class="nav">
+    <a class="logo" href="index.html"><div class="logo-mark">م</div>معماریار</a>
+    <a class="back" href="index.html">→ بازگشت به صفحه اصلی</a>
+  </div>
+</header>
+
+<div class="container">
+
+  <section class="cover">
+    <div class="kicker mono">PACK 02 — NEZAM MOHANDESI / MABHAS 02</div>
+    <h1>نظام مهندسی | مبحث دوم (نظامات اداری)</h1>
+    <p class="sub">نقشه راه مبحث دوم و رمزگشایی نکات طلایی — یک بسته فشرده با تمرکز روی دام‌های آزمونی و تست‌های قابل ردیابی به منبع.</p>
+
+    <div class="price-bar">
+      <div class="price">۳۰,۰۰۰ تومان<small>پرداخت یک‌بار، دسترسی دائمی پس از راه‌اندازی درگاه</small></div>
+      <a class="btn-buy" href="#" aria-disabled="true" onclick="return false;">خرید محصول</a>
+    </div>
+    <p class="buy-note">سیستم پرداخت آنلاین معماریار در حال راه‌اندازی است. برای اطلاع از فعال‌شدن خرید، از طریق اینستاگرام پیگیری کنید.</p>
+  </section>
+
+  <section class="sh">
+    <h2>این پک برای چه کسانی است؟</h2>
+    <div class="for-who">
+      <span class="tag-pill">داوطلبان آزمون نظام مهندسی معماری</span>
+      <span class="tag-pill">دانشجویان در حال مرور شب امتحان</span>
+      <span class="tag-pill">کسانی که با جدول‌های خشک مشکل دارند</span>
+    </div>
+  </section>
+
+  <section class="sh">
+    <h2>بسته شامل دو بخش است</h2>
+    <div class="two-part">
+      <div class="part">
+        <div class="tag mono">PART 01 — KEYS</div>
+        <h3>رمزگشایی مبحث دوم</h3>
+        <p>اعداد طلایی هر جدول، نقشه یادگیری «از کدام جدول به کدام عدد»، ماتریس تقابل دفتر مهندسی در برابر طراح حقوقی، الگوریتم حفظی صلاحیت تأسیسات، و رادار تله‌های تستی.</p>
+      </div>
+      <div class="part">
+        <div class="tag mono">PART 02 — TESTS</div>
+        <h3>نکات طلایی و بانک تست</h3>
+        <p>۴۰ تست چهارگزینه‌ای استاندارد و تله‌دار، استخراج‌شده از تست‌های واقعی، هرکدام با کلید و تحلیل کوتاه بر اساس منبع.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="sh">
+    <h2>چه چیزی یاد می‌گیرید</h2>
+    <div class="grid2">
+      <div class="item"><span class="m">＋</span> سقف ظرفیت و تعداد کار مجاز مهندسان (جدول ۱ و ۲)</div>
+      <div class="item"><span class="m">＋</span> نردبان ظرفیت طراحی ساختمان (جدول ۱۱)</div>
+      <div class="item"><span class="m">＋</span> محورهای سه‌گانه اجرای ساختمان (جدول ۵)</div>
+      <div class="item"><span class="m">＋</span> کاردان و معمار تجربی (جدول ۹)</div>
+      <div class="item"><span class="m">＋</span> الگوریتم حفظی صلاحیت تأسیسات (جدول ۱۳)</div>
+      <div class="item"><span class="m">＋</span> خط زمان بیمه کیفیت و شناسنامه فنی و ملکی</div>
+    </div>
+    <div class="disclaimer">این یک محصول آموزشی برای کمک به آزمون است، نه جایگزین متن رسمی برای استناد حقوقی. همیشه آخرین اصلاحیه‌های مبحث دوم مقررات ملی ساختمان را از منبع رسمی بررسی کنید.</div>
+  </section>
+
+</div>
+
+<footer>
+  <div class="brand">معماریار</div>
+  یاد بگیر، طراحی کن.
+</footer>
+
+</body>
+</html>
